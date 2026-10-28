@@ -1,0 +1,14 @@
+# Python & Environment
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# Scratch & Temporary
+extracted_doc.txt
+test_concat.txt
+test_out.mp4
+test_speech.mp3
+test_speech.wav

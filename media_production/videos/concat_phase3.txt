@@ -1,0 +1,24 @@
+ffconcat version 1.0
+file 'C:/Users/mauri/.gemini/antigravity/scratch/interview/media_production/visuals/slides/master_intro_slate.jpg'
+duration 4.000
+file 'C:/Users/mauri/.gemini/antigravity/scratch/interview/media_production/visuals/slides/master_intro_slate.jpg'
+duration 27.768
+file 'C:/Users/mauri/.gemini/antigravity/scratch/interview/media_production/visuals/slides/p3_slide_01_matrix.jpg'
+duration 51.720
+file 'C:/Users/mauri/.gemini/antigravity/scratch/interview/media_production/visuals/slides/p3_slide_01_matrix.jpg'
+duration 41.712
+file 'C:/Users/mauri/.gemini/antigravity/scratch/interview/media_production/visuals/slides/p3_slide_01_matrix.jpg'
+duration 37.464
+file 'C:/Users/mauri/.gemini/antigravity/scratch/interview/media_production/visuals/slides/p3_slide_02_redress_gap.jpg'
+duration 49.488
+file 'C:/Users/mauri/.gemini/antigravity/scratch/interview/media_production/visuals/slides/p3_slide_03_trust_index.jpg'
+duration 45.024
+file 'C:/Users/mauri/.gemini/antigravity/scratch/interview/media_production/visuals/slides/p3_slide_04_recommendations.jpg'
+duration 39.288
+file 'C:/Users/mauri/.gemini/antigravity/scratch/interview/media_production/visuals/slides/p3_slide_04_recommendations.jpg'
+duration 40.632
+file 'C:/Users/mauri/.gemini/antigravity/scratch/interview/media_production/visuals/slides/master_outro_slate.jpg'
+duration 19.080
+file 'C:/Users/mauri/.gemini/antigravity/scratch/interview/media_production/visuals/slides/master_outro_slate.jpg'
+duration 4.000
+file 'C:/Users/mauri/.gemini/antigravity/scratch/interview/media_production/visuals/slides/master_outro_slate.jpg'

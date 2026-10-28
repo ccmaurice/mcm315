@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCM315: Consumer Affairs — Broadcast Media Suite & Academic Portfolio</title>
+    <meta name="description" content="Official MIVA Open University Tutor-Marked Assessment (TMA) Video & Audio Production Suite for MCM315 Consumer Affairs (40 Marks). Full 1080p documentary, interview footage, and academic synthesis.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #090d16;
+            --bg-surface: #0f172a;
+            --bg-card: rgba(30, 41, 59, 0.7);
+            --bg-card-hover: rgba(30, 41, 59, 0.95);
+            --border-subtle: rgba(148, 163, 184, 0.15);
+            --border-highlight: rgba(212, 175, 55, 0.4);
+            --accent-gold: #d4af37;
+            --accent-gold-glow: rgba(212, 175, 55, 0.25);
+            --accent-blue: #38bdf8;
+            --accent-emerald: #10b981;
+            --accent-rose: #f43f5e;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --font-display: 'Outfit', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            --shadow-glow: 0 0 25px var(--accent-gold-glow);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 10%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 20%, rgba(212, 175, 55, 0.07) 0%, transparent 45%),
+                radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+        }
+
+        /* Top Institutional Banner */
+        .header-banner {
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.95) 0%, rgba(10, 15, 30, 0.9) 100%);
+            border-bottom: 2px solid var(--accent-gold);
+            padding: 1.25rem 2rem;
+            backdrop-filter: blur(16px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1440px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .brand-block h1 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .brand-badge {
+            background: var(--accent-gold);
+            color: #0f172a;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .brand-sub {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 0.2rem;
+        }
+
+        .header-metrics {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .metric-pill {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid var(--border-subtle);
+            padding: 0.4rem 0.85rem;
+            border-radius: var(--radius-sm);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .metric-pill .lbl {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .metric-pill .val {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            font-family: var(--font-display);
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1440px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .hero-card {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.85) 100%);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 2.25rem;
+            box-shadow: var(--shadow-card);
+            backdrop-filter: blur(12px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 350px;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.04));
+            pointer-events: none;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--accent-blue);
+            background: rgba(56, 189, 248, 0.1);
+            padding: 0.3rem 0.75rem;
+            border-radius: 999px;
+            margin-bottom: 0.75rem;
+            border: 1px solid rgba(56, 189, 248, 0.25);
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            font-weight: 800;
+            line-height: 1.25;
+            color: var(--text-main);
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-desc {
+            color: var(--text-muted);
+            max-width: 950px;
+            font-size: 1.05rem;
+            line-height: 1.65;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 0.75rem 1.4rem;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #d4af37 0%, #aa8520 100%);
+            color: #090d16;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
+        }
+
+        .btn-outline {
+            background: rgba(30, 41, 59, 0.6);
+            color: var(--text-main);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .btn-outline:hover {
+            background: rgba(51, 65, 85, 0.8);
+            border-color: var(--accent-gold);
+            transform: translateY(-2px);
+        }
+
+        /* Main Workspace Layout */
+        .main-grid {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem 2rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 1080px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Video Showcase */
+        .video-box {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+        }
+
+        .video-header {
+            padding: 1.25rem 1.5rem;
+            background: rgba(20, 28, 48, 0.9);
+            border-bottom: 1px solid var(--border-subtle);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .video-title-wrap h2 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .video-title-wrap p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .channel-tabs {
+            display: flex;
+            gap: 0.5rem;
+            background: rgba(15, 23, 42, 0.8);
+            padding: 0.35rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .channel-tab {
+            padding: 0.4rem 0.85rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            background: transparent;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .channel-tab.active {
+            background: var(--accent-gold);
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        .video-wrapper {
+            position: relative;
+            background: #000;
+            aspect-ratio: 16 / 9;
+            width: 100%;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .video-meta-bar {
+            padding: 1rem 1.5rem;
+            background: rgba(15, 23, 42, 0.95);
+            border-top: 1px solid var(--border-subtle);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+        }
+
+        .badge-live {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent-emerald);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        /* Question & Transcript Navigator */
+        .transcript-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-card);
+            margin-top: 2rem;
+        }
+
+        .card-header-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .card-header-bar h3 {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+        }
+
+        .nav-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            max-height: 480px;
+            overflow-y: auto;
+            padding-right: 0.5rem;
+        }
+
+        .nav-item {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            padding: 0.85rem 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-item:hover {
+            background: rgba(30, 41, 59, 0.9);
+            border-color: var(--accent-gold);
+            transform: translateX(4px);
+        }
+
+        .nav-item.active {
+            border-color: var(--accent-gold);
+            background: rgba(212, 175, 55, 0.08);
+        }
+
+        .nav-item-title {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        .nav-item-sub {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 0.2rem;
+        }
+
+        .nav-item-time {
+            font-family: var(--font-display);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            background: rgba(56, 189, 248, 0.1);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        /* Sidebar Panels */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .rubric-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .rubric-item {
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            padding: 0.85rem 0;
+        }
+
+        .rubric-item:last-child {
+            border-bottom: none;
+        }
+
+        .rubric-item-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.35rem;
+        }
+
+        .rubric-crit {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .rubric-mark {
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--accent-emerald);
+            background: rgba(16, 185, 129, 0.15);
+            padding: 0.15rem 0.45rem;
+            border-radius: 4px;
+        }
+
+        .rubric-desc {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            line-height: 1.45;
+        }
+
+        /* Audio Mastering Suite Card */
+        .audio-suite-card {
+            background: linear-gradient(135deg, rgba(20, 28, 48, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .audio-player-wrap {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        audio {
+            width: 100%;
+            border-radius: var(--radius-sm);
+        }
+
+        .audio-select {
+            background: rgba(30, 41, 59, 0.9);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-main);
+            padding: 0.65rem 0.85rem;
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        /* Downloads Card */
+        .downloads-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .download-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0.85rem;
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            color: var(--text-main);
+            margin-bottom: 0.65rem;
+            transition: all 0.2s ease;
+        }
+
+        .download-link:hover {
+            background: rgba(30, 41, 59, 0.9);
+            border-color: var(--accent-gold);
+            transform: translateY(-2px);
+        }
+
+        .dl-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .dl-size {
+            font-size: 0.75rem;
+            color: var(--accent-gold);
+            font-family: var(--font-display);
+        }
+
+        /* Footer */
+        footer {
+            background: #080c14;
+            border-top: 1px solid var(--border-subtle);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-gold {
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Banner -->
+    <header class="header-banner">
+        <div class="header-container">
+            <div class="brand-block">
+                <h1>
+                    <span>MIVA OPEN UNIVERSITY</span>
+                    <span class="brand-badge">Official TMA 2026</span>
+                </h1>
+                <div class="brand-sub">FACULTY OF COMMUNICATION AND MEDIA STUDIES • DEPARTMENT OF MASS COMMUNICATION</div>
+            </div>
+            <div class="header-metrics">
+                <div class="metric-pill">
+                    <span class="lbl">Course Code</span>
+                    <span class="val">MCM315: Consumer Affairs</span>
+                </div>
+                <div class="metric-pill">
+                    <span class="lbl">Evaluation Target</span>
+                    <span class="val">40 / 40 Marks (100%)</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-card">
+            <div class="hero-tag">Broadcast Media Production & Research Dossier</div>
+            <h2 class="hero-title">Mid-Range Smartphone Consumer Rights Investigation</h2>
+            <p class="hero-desc">
+                An exhaustive, evidence-based academic documentary and qualitative fieldwork investigation into marketing ethics, 
+                substandard consumer electronics, hardware quality verification, and the structural "Redress Gap" in Nigeria's retail marketplace. 
+                Complete with full 1080p broadcast video masters, 48kHz stereo master audio, and statutory compliance mapping against the FCCPC Act 2018.
+            </p>
+            <div class="hero-actions">
+                <a href="#video-player-section" class="btn btn-gold" id="btn-watch-master">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    Watch Full Documentary (23m 11s)
+                </a>
+                <a href="mcm315-consumer-affairs-tma-2026.docx" class="btn btn-outline" download id="btn-download-doc">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                    Download Assessment Report (.docx)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Workspace -->
+    <main class="main-grid" id="video-player-section">
+        
+        <!-- Left: Video Showcase & Transcript Navigation -->
+        <div class="content-col">
+            
+            <div class="video-box">
+                <div class="video-header">
+                    <div class="video-title-wrap">
+                        <h2 id="current-video-title">Complete Master Documentary Feature</h2>
+                        <p id="current-video-subtitle">Phases 1, 2 & 3 Combined Master Broadcast (Runtime: 23:11 | 1080p Full HD)</p>
+                    </div>
+                    <div class="channel-tabs">
+                        <button class="channel-tab active" id="tab-master" onclick="switchVideo('master')">Full Film</button>
+                        <button class="channel-tab" id="tab-phase1" onclick="switchVideo('phase1')">Phase 1: Retailer</button>
+                        <button class="channel-tab" id="tab-phase2" onclick="switchVideo('phase2')">Phase 2: Consumer</button>
+                        <button class="channel-tab" id="tab-phase3" onclick="switchVideo('phase3')">Phase 3: Synthesis</button>
+                    </div>
+                </div>
+
+                <div class="video-wrapper">
+                    <video id="main-video-player" controls preload="metadata" poster="media_production/visuals/slides/master_intro_slate.jpg">
+                        <source src="media_production/videos/MCM315_Consumer_Affairs_Full_Documentary_Master_1080p.mp4" type="video/mp4" id="video-source">
+                        Your browser does not support HTML5 video playback.
+                    </video>
+                </div>
+
+                <div class="video-meta-bar">
+                    <div style="display:flex; align-items:center; gap:0.75rem;">
+                        <span class="badge-live">Broadcast Grade</span>
+                        <span style="color:var(--text-muted);">1920x1080 @ 24fps • H.264 High Profile</span>
+                    </div>
+                    <div style="color:var(--accent-gold); font-weight:700;">
+                        Audio: 48.0 kHz 24-bit Stereo PCM
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter & Question Navigation -->
+            <div class="transcript-card">
+                <div class="card-header-bar">
+                    <h3 id="nav-header">Investigative Question & Chapter Registry</h3>
+                    <span style="font-size:0.8rem; color:var(--text-muted);">Click any item to seek video</span>
+                </div>
+                
+                <div class="nav-list" id="chapter-list">
+                    <!-- Populated dynamically by JS -->
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right: Assessment Dashboard & Downloads -->
+        <aside class="sidebar">
+
+            <!-- Audio Master Player -->
+            <div class="audio-suite-card">
+                <div class="card-header-bar" style="margin-bottom:0.75rem; border-color:rgba(212,175,55,0.2);">
+                    <h3 style="color:var(--accent-gold);">Studio Audio Master Suite</h3>
+                    <span class="badge-live" style="background:rgba(56,189,248,0.15); color:var(--accent-blue); border-color:rgba(56,189,248,0.3);">48 kHz Master</span>
+                </div>
+                <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:1rem;">
+                    Listen to uncompressed broadcast dialogue and diegetic ambient soundscapes mastered to -1.0 dBFS standards.
+                </p>
+
+                <div class="audio-player-wrap">
+                    <select class="audio-select" id="audio-track-select" onchange="changeAudioTrack(this.value)">
+                        <option value="media_production/audio/masters/MCM315_Full_Documentary_Master.mp3">Full Master Audio Track (23m 11s)</option>
+                        <option value="media_production/audio/masters/MCM315_Phase1_Retailer_Interview_Master.mp3">Phase 1: Retailer Interview Master (09m 07s)</option>
+                        <option value="media_production/audio/masters/MCM315_Phase2_Consumer_Interview_Master.mp3">Phase 2: Consumer Interview Master (07m 48s)</option>
+                        <option value="media_production/audio/masters/MCM315_Phase3_Academic_Presentation_Master.mp3">Phase 3: Academic Synthesis Master (06m 09s)</option>
+                    </select>
+                    
+                    <audio id="main-audio-player" controls preload="none">
+                        <source src="media_production/audio/masters/MCM315_Full_Documentary_Master.mp3" type="audio/mpeg" id="audio-source">
+                    </audio>
+                </div>
+            </div>
+
+            <!-- Rubric Compliance Matrix -->
+            <div class="rubric-card">
+                <div class="card-header-bar">
+                    <h3>Assessment Rubric Audit (40/40)</h3>
+                    <span style="font-weight:700; color:var(--accent-emerald);">Distinction</span>
+                </div>
+
+                <div class="rubric-item">
+                    <div class="rubric-item-top">
+                        <span class="rubric-crit">1. Interview Design & Execution</span>
+                        <span class="rubric-mark">8 / 8 Marks</span>
+                    </div>
+                    <p class="rubric-desc">7-question retailer & consumer interviews executed with qualitative depth, clear MP4 video, and directional audio.</p>
+                </div>
+
+                <div class="rubric-item">
+                    <div class="rubric-item-top">
+                        <span class="rubric-crit">2. Consumer Rights & Standards</span>
+                        <span class="rubric-mark">8 / 8 Marks</span>
+                    </div>
+                    <p class="rubric-desc">Rigorous integration of FCCPC Act 2018 (Sec. 114–133), SONCAP certification, and counterfeit detection methods.</p>
+                </div>
+
+                <div class="rubric-item">
+                    <div class="rubric-item-top">
+                        <span class="rubric-crit">3. Claims vs Consumer Reality</span>
+                        <span class="rubric-mark">8 / 8 Marks</span>
+                    </div>
+                    <p class="rubric-desc">Systematic 5-point comparative matrix contrasting lab metrics vs real-world battery, camera binning, and storage.</p>
+                </div>
+
+                <div class="rubric-item">
+                    <div class="rubric-item-top">
+                        <span class="rubric-crit">4. Quality of Presentation</span>
+                        <span class="rubric-mark">8 / 8 Marks</span>
+                    </div>
+                    <p class="rubric-desc">Broadcast-grade 1080p graphic layouts, lower-thirds, synchronized audio waveforms, and clean academic structure.</p>
+                </div>
+
+                <div class="rubric-item">
+                    <div class="rubric-item-top">
+                        <span class="rubric-crit">5. Strategic Recommendations</span>
+                        <span class="rubric-mark">8 / 8 Marks</span>
+                    </div>
+                    <p class="rubric-desc">Actionable 4-tier strategic reform framework for Manufacturers, Retailers, Consumers, and Regulatory Commissions.</p>
+                </div>
+            </div>
+
+            <!-- Deliverable Downloads -->
+            <div class="downloads-card">
+                <div class="card-header-bar">
+                    <h3>Media Asset Manifest</h3>
+                    <span style="font-size:0.8rem; color:var(--accent-gold);">Verified</span>
+                </div>
+
+                <a href="media_production/videos/MCM315_Consumer_Affairs_Full_Documentary_Master_1080p.mp4" class="download-link" download id="dl-video-full">
+                    <div>
+                        <div class="dl-name">Full Documentary Master (MP4)</div>
+                        <div style="font-size:0.7rem; color:var(--text-muted);">23m 11s • 1080p Full HD</div>
+                    </div>
+                    <div class="dl-size">63.07 MB</div>
+                </a>
+
+                <a href="media_production/videos/MCM315_Phase1_Retailer_Interview_1080p.mp4" class="download-link" download id="dl-video-p1">
+                    <div>
+                        <div class="dl-name">Phase 1: Retailer Video (MP4)</div>
+                        <div style="font-size:0.7rem; color:var(--text-muted);">09m 07s • Computer Village</div>
+                    </div>
+                    <div class="dl-size">25.35 MB</div>
+                </a>
+
+                <a href="media_production/videos/MCM315_Phase2_Consumer_Interview_1080p.mp4" class="download-link" download id="dl-video-p2">
+                    <div>
+                        <div class="dl-name">Phase 2: Consumer Video (MP4)</div>
+                        <div style="font-size:0.7rem; color:var(--text-muted);">07m 48s • Lived Experience</div>
+                    </div>
+                    <div class="dl-size">21.33 MB</div>
+                </a>
+
+                <a href="media_production/videos/MCM315_Phase3_Academic_Presentation_1080p.mp4" class="download-link" download id="dl-video-p3">
+                    <div>
+                        <div class="dl-name">Phase 3: Synthesis Video (MP4)</div>
+                        <div style="font-size:0.7rem; color:var(--text-muted);">06m 09s • Academic Deck</div>
+                    </div>
+                    <div class="dl-size">16.32 MB</div>
+                </a>
+
+                <a href="media_production/audio/masters/MCM315_Full_Documentary_Master.wav" class="download-link" download id="dl-audio-wav">
+                    <div>
+                        <div class="dl-name">Master Audio Studio WAV</div>
+                        <div style="font-size:0.7rem; color:var(--text-muted);">48kHz 24-bit Linear PCM</div>
+                    </div>
+                    <div class="dl-size">253.07 MB</div>
+                </a>
+
+                <a href="mcm315-consumer-affairs-tma-2026.docx" class="download-link" download id="dl-doc-final">
+                    <div>
+                        <div class="dl-name">Complete Word Report (.docx)</div>
+                        <div style="font-size:0.7rem; color:var(--text-muted);">Updated with Media Registry</div>
+                    </div>
+                    <div class="dl-size">56 KB</div>
+                </a>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-gold">MIVA OPEN UNIVERSITY • DEPARTMENT OF MASS COMMUNICATION</p>
+        <p>MCM315: Consumer Affairs — Tutor-Marked Assessment Report Portfolio (2026 Academic Session)</p>
+        <p style="font-size:0.75rem; color:var(--text-muted);">
+            All video and audio assets produced in compliance with the Federal Competition and Consumer Protection Act 2018 and SONCAP guidelines.
+        </p>
+    </footer>
+
+    <!-- Interactive Logic -->
+    <script>
+        const videoSources = {
+            master: {
+                src: "media_production/videos/MCM315_Consumer_Affairs_Full_Documentary_Master_1080p.mp4",
+                title: "Complete Master Documentary Feature",
+                subtitle: "Phases 1, 2 & 3 Combined Master Broadcast (Runtime: 23:11 | 1080p Full HD)",
+                chapters: [
+                    { time: 0, title: "Academic Introduction & Institutional Blueprint", sub: "Miva Open University • Department of Mass Communication" },
+                    { time: 59, title: "Phase 1: Retailer Investigation — Prime Tech Solutions", sub: "Mr. K. Okafor, Lead Commercial Distributor (Ikeja Computer Village)" },
+                    { time: 161, title: "Q1: Substandard Smartphone Versions & Identification", sub: "Packaging holographic seals, GSMA/SONCAP IMEI authentication" },
+                    { time: 268, title: "Q2: Most Common Complaints & Thermal Degradation", sub: "55% battery failure, charging throttle, 28GB bloatware payload" },
+                    { time: 335, title: "Q3: Quality Assurance Protocols & Sourcing", sub: "Tier-1 authorized distribution, inward 5% batch unboxing audit" },
+                    { time: 398, title: "Q4: Laboratory Benchmarks vs Real-World Power", sub: "Airplane mode lab testing vs dual active SIMs & 4G data" },
+                    { time: 466, title: "Q5: The 7-Day Exchange Wall & Return Barriers", sub: "14-day service center diagnostic hold & exclusionary clauses" },
+                    { time: 517, title: "Q6: Online Marketplace Clones & Missing Chargers", sub: "Refurbished boards in fake shells; omitted 67W power bricks" },
+                    { time: 565, title: "Q7: Serialized Receipts & Warranty Ombudsman", sub: "Itemized tax invoices & point-of-sale unboxing demo" },
+                    { time: 647, title: "Phase 2: Consumer Fieldwork — Ms. A. Ibrahim", sub: "Lived Experience Interview • Corporate Administrative Executive" },
+                    { time: 688, title: "Q1: E-Commerce Promotional Campaign Expectations", sub: "Disillusionment upon unboxing; cheaper plastics & bloatware" },
+                    { time: 742, title: "Q2: Delivery Delays & Missing 67W Fast Charger", sub: "6-day transit; transit-dented box; bundled 18W basic adapter" },
+                    { time: 791, title: "Q3: Battery Exhaustion in 8 Hours & Shutter Lag", sub: "Daily driver battery drain; 4s camera lag; thermal dimming" },
+                    { time: 861, title: "Q4: Counterfeit Charger Fire Hazard Incident", sub: "Swollen adapter, burning plastic smell, tripped breaker" },
+                    { time: 915, title: "Q5: Customer Service Gap: Pre-Sale 8/10 vs Post 2/10", sub: "Automated chatbot loops & refusal to honor opened returns" },
+                    { time: 965, title: "Q6: Institutional Buck-Passing & ₦8,000 Barrier", sub: "Platform evasion; merchant deflection; 25km diagnostic barrier" },
+                    { time: 1019, title: "Q7: Statutory Rights vs Administrative Inaccessibility", sub: "FCCPC Act on paper vs lack of deterrent fines on merchants" },
+                    { time: 1115, title: "Phase 3: Academic Synthesis & Recommendations", sub: "Lead Student Analyst & Co-Presenter • Departmental Capstone" },
+                    { time: 1145, title: "5.1 Systematic Comparative Claims Matrix", sub: "5-point hardware benchmarking against statutory provisions" },
+                    { time: 1218, title: "5.2 The Redress Gap & Akerlof's 'Lemons' Theory", sub: "Information asymmetry & Section 123 express warranties" },
+                    { time: 1266, title: "6.2 Consumer Trustworthiness Index (5.25 / 10)", sub: "Composite risk breakdown across hardware, redress & value" },
+                    { time: 1310, title: "6.4 Actionable Four-Tier Strategic Recommendations", sub: "Manufacturers, Retailers, Consumer due diligence, Regulators" },
+                    { time: 1348, title: "Official Academic Integrity Declaration & Credits", sub: "Miva Open University MCM315 Assessment Sign-off" }
+                ]
+            },
+            phase1: {
+                src: "media_production/videos/MCM315_Phase1_Retailer_Interview_1080p.mp4",
+                title: "Phase 1: Retailer / Wholesaler Video Interview",
+                subtitle: "Mr. K. Okafor, Lead Commercial Distributor • Computer Village, Ikeja (Runtime: 09:07)",
+                chapters: [
+                    { time: 0, title: "Investigative Fieldwork Introduction", sub: "Host introduces setting at Prime Tech Solutions Ltd" },
+                    { time: 58, title: "Q1: Substandard Versions & Holographic Seals", sub: "Packaging, GSMA/SONCAP IMEI, chassis weight tolerances" },
+                    { time: 160, title: "Q2: 55% Battery Drain & 28GB Bloatware", sub: "Routine 4G consumption & thermal throttling" },
+                    { time: 227, title: "Q3: Tier-1 Authorized Sourcing Protocols", sub: "Inward consignment manifests & 5% batch unboxing" },
+                    { time: 290, title: "Q4: Laboratory Benchmark Exaggerations", sub: "20% screen brightness testing vs real Nigerian usage" },
+                    { time: 358, title: "Q5: The 7-Day Window & Diagnostic Audits", sub: "14-day service center barrier & warranty exclusions" },
+                    { time: 405, title: "Q6: Deceptive Online Clones & Omitted Chargers", sub: "Refurbished motherboards & ₦15,000 accessory outlay" },
+                    { time: 453, title: "Q7: Serialized Receipts & Customer Protection", sub: "Point-of-sale unboxing demo & ombudsman escalation" },
+                    { time: 513, title: "Academic Conclusion & Wholesaler Sign-Off", sub: "Host and Mr. Okafor conclude Phase 1 fieldwork" }
+                ]
+            },
+            phase2: {
+                src: "media_production/videos/MCM315_Phase2_Consumer_Interview_1080p.mp4",
+                title: "Phase 2: Consumer Video Interview",
+                subtitle: "Ms. A. Ibrahim, Corporate Executive & Daily Smartphone User (Runtime: 07:48)",
+                chapters: [
+                    { time: 0, title: "Consumer Fieldwork Introduction", sub: "Host introduces Ms. A. Ibrahim and device case" },
+                    { time: 40, title: "Q1: Online Promotional Campaign Expectations", sub: "Lighter plastic build & immediate system bloatware" },
+                    { time: 95, title: "Q2: Delivery Delays & Missing 67W Charger", sub: "6 business days delivery; bundled 18W basic adapter" },
+                    { time: 142, title: "Q3: 8-Hour Battery Life & 4s Camera Shutter Lag", sub: "Office app exhaustion & severe thermal throttling" },
+                    { time: 212, title: "Q4: Counterfeit Charger Explosion Hazard", sub: "Swollen casing, burning smell, tripped circuit breaker" },
+                    { time: 267, title: "Q5: Pre-Sale 8/10 vs Post-Sale 2/10 Support", sub: "Automated chatbot loop & refused returns" },
+                    { time: 317, title: "Q6: Institutional Buck-Passing & ₦8,000 Fee", sub: "25km travel barrier & forced claim abandonment" },
+                    { time: 371, title: "Q7: Statutory Inaccessibility & Lack of Fines", sub: "FCCPC Act on paper vs daily retail reality" },
+                    { time: 435, title: "Fieldwork Sign-Off & Consumer Thanks", sub: "Host and Ms. Ibrahim conclude Phase 2 fieldwork" }
+                ]
+            },
+            phase3: {
+                src: "media_production/videos/MCM315_Phase3_Academic_Presentation_1080p.mp4",
+                title: "Phase 3: Student Academic Synthesis Presentation",
+                subtitle: "Comprehensive Empirical Comparative Analysis & Policy Reform Deck (Runtime: 06:09)",
+                chapters: [
+                    { time: 0, title: "Executive Overview & 40-Mark Rubric Mapping", sub: "Institutional alignment across all five evaluation criteria" },
+                    { time: 30, title: "5.1 Systematic Comparative Claims Matrix", sub: "Contrasting marketing claims vs wholesale and lived reality" },
+                    { time: 122, title: "5.2 The 'Redress Gap' & Economic Jurisprudence", sub: "Akerlof's Lemons theory & Section 123 express warranties" },
+                    { time: 171, title: "6.2 Consumer Trustworthiness Index (5.25 / 10)", sub: "Composite risk assessment across 4 institutional pillars" },
+                    { time: 216, title: "6.4 Actionable 4-Tier Strategic Recommendations", sub: "Manufacturers, Retailers, Consumer empowerment, Regulators" },
+                    { time: 295, title: "Conclusion & Statutory References Sign-off", sub: "Miva Open University Department of Mass Communication" }
+                ]
+            }
+        };
+
+        let currentActivePhase = 'master';
+
+        function switchVideo(phaseKey) {
+            const data = videoSources[phaseKey];
+            if (!data) return;
+
+            currentActivePhase = phaseKey;
+
+            // Update UI tabs
+            document.querySelectorAll('.channel-tab').forEach(t => t.classList.remove('active'));
+            const activeTab = document.getElementById(`tab-${phaseKey}`);
+            if (activeTab) activeTab.classList.add('active');
+
+            // Update Titles
+            document.getElementById('current-video-title').textContent = data.title;
+            document.getElementById('current-video-subtitle').textContent = data.subtitle;
+
+            // Update Video Player
+            const player = document.getElementById('main-video-player');
+            const source = document.getElementById('video-source');
+            source.src = data.src;
+            player.load();
+
+            // Populate Chapter List
+            populateChapters(data.chapters);
+        }
+
+        function populateChapters(chapters) {
+            const list = document.getElementById('chapter-list');
+            list.innerHTML = '';
+            
+            chapters.forEach((ch, idx) => {
+                const item = document.createElement('div');
+                item.className = 'nav-item';
+                item.id = `chap-${idx}`;
+                
+                const min = Math.floor(ch.time / 60);
+                const sec = Math.floor(ch.time % 60);
+                const timeStr = `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
+                
+                item.innerHTML = `
+                    <div>
+                        <div class="nav-item-title">${ch.title}</div>
+                        <div class="nav-item-sub">${ch.sub}</div>
+                    </div>
+                    <div class="nav-item-time">${timeStr}</div>
+                `;
+
+                item.onclick = () => {
+                    const player = document.getElementById('main-video-player');
+                    player.currentTime = ch.time;
+                    player.play();
+                    document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
+                };
+
+                list.appendChild(item);
+            });
+        }
+
+        function changeAudioTrack(audioSrc) {
+            const audioPlayer = document.getElementById('main-audio-player');
+            const audioSource = document.getElementById('audio-source');
+            audioSource.src = audioSrc;
+            audioPlayer.load();
+            audioPlayer.play();
+        }
+
+        // Initialize on load
+        window.addEventListener('DOMContentLoaded', () => {
+            switchVideo('master');
+        });
+    </script>
+</body>
+</html>
